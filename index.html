@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon to Mars</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+ 
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Colony: Project New Eden</title>
+    <style>
+        
+        :root {
+            --mars-red: #ff4d00;
+            --mars-dark: #cc3d00;
+            --bg-black: #050507;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        
+        body {
+            background-color: var(--bg-black);
+            color: #ffffff;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            color: var(--mars-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        * {
+            transition: var(--transition);
+        }
+
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(5, 5, 7, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 77, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--mars-red);
+            text-shadow: 0 0 8px var(--mars-red);
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&q=80&w=1500');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid var(--mars-red);
+        }
+
+        .hero h1 { font-size: 4rem; margin-bottom: 10px; }
+
+
+        section {
+            padding: 100px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 77, 0, 0.05);
+            border-color: var(--mars-red);
+            box-shadow: 0 0 30px rgba(255, 77, 0, 0.2);
+        }
+
+
+        .facts-box {
+            background: linear-gradient(90deg, #1a0a05, #3d1508);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--mars-red);
+            margin: 40px 0;
+        }
+
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 15px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.2);
+        }
+
+        .gallery-item:hover img {
+            filter: grayscale(0%) contrast(1);
+            transform: scale(1.1);
+        }
+
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            background: var(--mars-red);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+
+        footer {
+            background: #000;
+            padding: 50px 10%;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .author-tag {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px dashed var(--mars-red);
+            border-radius: 50px;
+            color: var(--mars-red);
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#mission">Місія</a>
+        <a href="#base">Технології</a>
+        <a href="#team">Команда</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#facts">Факти</a>
+    </nav>
+
+
+    <header class="hero">
+        <h1>MARS 2026</h1>
+        <p>ПРОЄКТ "Moon to Mars": ПЕРША СТАЛА КОЛОНІЯ</p>
+    </header>
+
+
+    <section id="mission">
+        <h2>Місія проєкту</h2>
+        <p>Ми створюємо не просто прихисток, а нову цивілізацію. Наша місія — довести, що людство здатне жити в гармонії з суворим середовищем Марса, використовуючи замкнені екосистеми та відновлювану енергію.</p>
+        <p>Підставую задуму проєкту є теорії Стівена Хокінса і Мічіо Каку.</p>
+    </section>
+
+
+    <section id="base">
+        <h2>Технології виживання</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Bio-Dome Alpha</h3>
+                <p>Багатошарові скляні куполи з захистом від радіації, де вирощуються перші марсіанські ліси.</p>
+            </div>
+            <div class="card">
+                <h3>H2O Extractors</h3>
+                <p>Роботизовані установки, що видобувають воду з підземного льоду в кратерах.</p>
+            </div>
+            <div class="card">
+                <h3>Fusion Core</h3>
+                <p>Ядерний синтез забезпечує колонію енергією 24/7 без залежності від Сонця.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="team">
+        <h2>Хто стоїть за місією</h2>
+        <div class="grid">
+            <div class="team-member">
+                <div class="team-avatar">👨‍🚀</div>
+                <h3>Джеймс Спайсер</h3>
+                <p>Головний інженер</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">👩‍🔬</div>
+                <h3>Еллен Елліс</h3>
+                <p>Керівник біолабораторії</p>
+            </div>
+            <div class="team-member">
+                <div class="team-avatar">🤖</div>
+                <h3>Росс Елдер</h3>
+                <p>Штучний інтелект бази</p>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="gallery">
+        <h2>Галерея колонії</h2>
+        <div class="grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?w=600" alt="Launch"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=600" alt="Tech"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506466010722-395aa2bef877?w=600" alt="Mars View"></div>
+        </div>
+    </section>
+
+ 
+    <section id="facts">
+        <div class="facts-box">
+            <h2>Чи знаєте ви?</h2>
+            <p>Марсіанська доба (Сол) триває 24 години та 39 хвилин. Це дає вам додатковий час на програмування та відпочинок щодня!</p>
+        </div>
+    </section>
+
+ 
+    <footer>
+        <p>Проєкт розроблено в межах курсу Web-архітектури</p>
+        <div class="author-tag">зробив Звірянський Остап 09.05.2026</div>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #555;">&copy; Всі права захищені. Mars Authority.</p>
+    </footer>
+  
+</body>
+</html>
