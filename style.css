@@ -1,0 +1,120 @@
+:root {
+    --mars-orange: #ff4d00;      
+    --deep-space: #0b0b0d;      
+    --text-silver: #e0e0e0;     
+    --glow: 0 0 20px rgba(255, 77, 0, 0.4); 
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+body {
+    background-color: var(--deep-space);
+    color: var(--text-silver);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background: rgba(11, 11, 13, 0.8);
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid rgba(255, 77, 0, 0.3);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+nav a:hover {
+    color: var(--mars-orange);
+    text-shadow: var(--glow);
+}
+
+
+section {
+    padding: 80px 10%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--mars-orange);       
+    background: rgba(255, 77, 0, 0.05);     
+    box-shadow: var(--glow);              
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; 
+    height: 4px;
+    background: var(--mars-orange);
+    transition: width 0.5s ease;
+}
+
+.card:hover::before {
+    width: 100%; 
+}
+
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    filter: grayscale(100%) brightness(0.6);
+}
+
+.gallery img:hover {
+    filter: grayscale(0%) brightness(1.1); 
+    transform: scale(1.05);               
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+.author-name {
+    color: var(--mars-orange);
+    font-weight: bold;
+    border: 1px dashed var(--mars-orange);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
